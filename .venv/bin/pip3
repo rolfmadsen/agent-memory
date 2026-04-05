@@ -1,4 +1,4 @@
-#!/home/rolfmadsen/Github/google_antigravity_memory-bank/.venv/bin/python3
+#!/home/rolfmadsen/Github/agent-memory/.venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

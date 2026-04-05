@@ -44,7 +44,7 @@ A **federated two-tier memory system** that gives every AI agent persistent, sea
 
 ```bash
 cd /path/to/your/project
-curl -sO https://raw.githubusercontent.com/rolfmadsen/google_antigravity_memory-bank/refs/heads/main/install.sh
+curl -sO https://raw.githubusercontent.com/rolfmadsen/agent-memory/refs/heads/main/install.sh
 chmod +x install.sh
 ./install.sh
 ```

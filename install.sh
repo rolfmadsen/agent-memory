@@ -3,7 +3,7 @@
 # This script initializes the Federated AI Memory System inside a new project workspace.
 # Usage: 
 #   cd /path/to/your/project
-#   curl -sO https://raw.githubusercontent.com/rolfmadsen/google_antigravity_memory-bank/main/install.sh
+#   curl -sO https://raw.githubusercontent.com/rolfmadsen/agent-memory/main/install.sh
 #   chmod +x install.sh
 #   ./install.sh [branch_or_tag]
 
@@ -22,7 +22,7 @@ mkdir -p "$GLOBAL_BRAIN"
 echo "📁 Global brain directory: $GLOBAL_BRAIN"
 
 BRANCH_OR_TAG="${1:-main}"
-REPO_URL="https://raw.githubusercontent.com/rolfmadsen/google_antigravity_memory-bank/refs/heads/$BRANCH_OR_TAG"
+REPO_URL="https://raw.githubusercontent.com/rolfmadsen/agent-memory/refs/heads/$BRANCH_OR_TAG"
 
 echo "📋 Downloading core modules..."
 curl -s "$REPO_URL/skills/memory-manager/memory_core.py" -o .agent/skills/memory-manager/memory_core.py
