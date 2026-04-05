@@ -59,7 +59,7 @@ Add to Zed's `settings.json`:
 {
   "context_servers": {
     "memory-brain": {
-      "command": "/home/rolfmadsen/.local/bin/uv",
+      "command": "uv",
       "args": ["run", "/path/to/project/.agent/skills/memory-manager/mcp_server.py"],
       "env": {
         "MEMORY_PROJECT_ROOT": "/path/to/project"
@@ -106,6 +106,34 @@ Add to `~/.config/Claude/claude_desktop_config.json`:
   }
 }
 ```
+
+#### VS Code (Cline / Roo Code / Continue)
+
+1. Open the Cline/Roo Code **Settings** (plug icon).
+2. Click **Configure** to open `cline_mcp_settings.json`.
+3. Add the server definition:
+
+```json
+{
+  "mcpServers": {
+    "memory-brain": {
+      "command": "uv",
+      "args": ["run", "/absolute/path/to/project/.agent/skills/memory-manager/mcp_server.py"],
+      "env": { "MEMORY_PROJECT_ROOT": "/absolute/path/to/project" }
+    }
+  }
+}
+```
+
+#### Cursor (MCP)
+
+1. Go to **Settings** ⮕ **Features** ⮕ **MCP Servers**.
+2. Click **+ Add Server**.
+3. Name: `memory-brain`, Type: `command`.
+4. Command: `uv run /absolute/path/to/project/.agent/skills/memory-manager/mcp_server.py`.
+
+> [!IMPORTANT]
+> **Path Resolution**: Always use **absolute paths** for the `mcp_server.py` and `MEMORY_PROJECT_ROOT` when configuring MCP servers globally (e.g., in Cline, Cursor, or Claude Desktop). This ensures the agent can find the memory bank regardless of your current workspace.
 
 #### Any Other Agent (CLI)
 
